@@ -16,7 +16,7 @@ Pod::Spec.new do |spec|
   #
 
   spec.name         = "LYZ_EasyNavigation"
-  spec.version      = "0.02"
+  spec.version      = "0.0.3"
   spec.summary      = "一个简单易用功能丰富的导航看控制器"
   spec.swift_version = '5.0'
 
