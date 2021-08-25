@@ -6,6 +6,7 @@ pod 'LYZ_EasyNavigation'
 
 使用:
 导航控制器使用: LYZEasyNavigationController
+```
 
 window = UIWindow(frame: UIScreen.main.bounds)
 
@@ -18,6 +19,8 @@ window?.makeKeyAndVisible()
 所有的 vc 集成于 LYZEasyViewController ,推荐创建一个 basevc 用于集成    
 
 class LYZTest1ViewController: LYZEasyViewController
+```
+```
 
 lyz_navigationBar //导航栏 View
 
@@ -40,5 +43,6 @@ rightSecondBtn //从右到左第二个按钮
 rightThirdBtn //从右到左第三个按钮
 
 等等等.....
+```
 
 更多新的功能持续更新中.....
