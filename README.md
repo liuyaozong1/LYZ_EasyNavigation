@@ -1,6 +1,7 @@
 # LYZ_EasyNavigation
  简单易用,功能丰富的导航控制器
  使用非常简单
+ 
 pod 'LYZ_EasyNavigation'
 
 使用:
