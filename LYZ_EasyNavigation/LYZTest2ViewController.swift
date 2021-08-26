@@ -13,20 +13,18 @@ class LYZTest2ViewController: LYZEasyViewController {
         super.viewDidLoad()
         self.view.backgroundColor = .white
         self.lyz_navTitle = "第二个"
-        
+        //禁止侧滑返回
+        self.lyz_canSideslipBack = false
+        self.rightFirstBtn.setTitle("设置", for: .normal)
     }
     
     override func clickBack() {
         print("禁止返回")
+        navigationController?.popViewController(animated: true)
     }
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    
+    deinit {
+        print("销毁了------")
     }
-    */
 
 }

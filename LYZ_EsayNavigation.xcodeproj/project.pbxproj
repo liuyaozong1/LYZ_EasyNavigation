@@ -19,6 +19,7 @@
 		B17BF05026CC9FE100BFE4DC /* LYZEasyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B17BF04F26CC9FE100BFE4DC /* LYZEasyViewController.swift */; };
 		B17BF05226CC9FF700BFE4DC /* LYZTest1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B17BF05126CC9FF700BFE4DC /* LYZTest1ViewController.swift */; };
 		B17BF05426CCA00200BFE4DC /* LYZTest2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B17BF05326CCA00200BFE4DC /* LYZTest2ViewController.swift */; };
+		B193592326D62A92006D1137 /* LYZEasyBtn.swift in Sources */ = {isa = PBXBuildFile; fileRef = B193592226D62A92006D1137 /* LYZEasyBtn.swift */; };
 		DD88C6FD4117FA00E688C83C /* Pods_LYZ_EsayNavigation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B9618FF694EA88D3084E44A /* Pods_LYZ_EsayNavigation.framework */; };
 /* End PBXBuildFile section */
 
@@ -40,6 +41,7 @@
 		B17BF04F26CC9FE100BFE4DC /* LYZEasyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LYZEasyViewController.swift; sourceTree = "<group>"; };
 		B17BF05126CC9FF700BFE4DC /* LYZTest1ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LYZTest1ViewController.swift; sourceTree = "<group>"; };
 		B17BF05326CCA00200BFE4DC /* LYZTest2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LYZTest2ViewController.swift; sourceTree = "<group>"; };
+		B193592226D62A92006D1137 /* LYZEasyBtn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LYZEasyBtn.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +106,7 @@
 				B17BF04F26CC9FE100BFE4DC /* LYZEasyViewController.swift */,
 				B17BF04226CC9ACF00BFE4DC /* LYZEasyNavigationController.swift */,
 				B17BF04426CC9B5200BFE4DC /* LYZEasyNavigationBar.swift */,
+				B193592226D62A92006D1137 /* LYZEasyBtn.swift */,
 			);
 			path = EasyNavigation;
 			sourceTree = "<group>";
@@ -246,6 +249,7 @@
 				B17BF02F26CC9A6400BFE4DC /* AppDelegate.swift in Sources */,
 				B17BF04326CC9ACF00BFE4DC /* LYZEasyNavigationController.swift in Sources */,
 				B17BF04726CC9BD500BFE4DC /* ATApply.swift in Sources */,
+				B193592326D62A92006D1137 /* LYZEasyBtn.swift in Sources */,
 				B17BF05026CC9FE100BFE4DC /* LYZEasyViewController.swift in Sources */,
 				B17BF05226CC9FF700BFE4DC /* LYZTest1ViewController.swift in Sources */,
 				B17BF04526CC9B5200BFE4DC /* LYZEasyNavigationBar.swift in Sources */,
@@ -397,7 +401,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.0.3;
+				MARKETING_VERSION = 0.0.4;
 				PRODUCT_BUNDLE_IDENTIFIER = "-23213.LYZ-EsayNavigation";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -420,7 +424,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.0.3;
+				MARKETING_VERSION = 0.0.4;
 				PRODUCT_BUNDLE_IDENTIFIER = "-23213.LYZ-EsayNavigation";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;

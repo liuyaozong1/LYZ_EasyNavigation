@@ -48,6 +48,35 @@ class LYZEasyNavigationBar: UIView {
         $0.font = .systemFont(ofSize:  12)
         $0.textColor = .black
     }
+    //右边的 stackView
+    lazy  var lyz_rightStackView = UIStackView().apply {
+        $0.alignment = .center
+        $0.axis = .horizontal
+        $0.distribution = .equalSpacing
+        $0.spacing = 5
+        $0.backgroundColor = .clear
+    }
+    //右边的第一个按钮
+    lazy var lyz_rightBtn: UIButton = {
+        let btn = UIButton()
+        btn.titleLabel?.font = UIFont.systemFont(ofSize: 14)
+        btn.setTitleColor(.black, for: .normal)
+        return btn
+    }()
+    //右边的第二个按钮
+    lazy var lyz_rightSecondBtn: UIButton =  {
+        let btn = UIButton()
+        btn.titleLabel?.font = UIFont.systemFont(ofSize: 14)
+        btn.setTitleColor(.black, for: .normal)
+        return btn
+    }()
+    //右边的第三个按钮
+    lazy var lyz_rightThirdBtn: UIButton =  {
+        let btn = UIButton()
+        btn.titleLabel?.font = UIFont.systemFont(ofSize: 14)
+        btn.setTitleColor(.black, for: .normal)
+        return btn
+    }()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -84,6 +113,8 @@ extension LYZEasyNavigationBar {
         lyz_titleStackView.addArrangedSubview(lyz_titleLabel)
         lyz_navigationView.addSubview(lyz_lineView)
         lyz_navigationView.addSubview(lyz_navSubtitleLabel)
+        lyz_navigationView.addSubview(lyz_rightStackView)
+        
     }
     
     func measureSubviews() {
@@ -113,6 +144,15 @@ extension LYZEasyNavigationBar {
             make.center.equalToSuperview()
             make.top.bottom.equalToSuperview()
         }
+        lyz_titleStackView.setContentHuggingPriority(.required, for: .horizontal)
+        lyz_titleStackView.setContentCompressionResistancePriority(.required, for: .horizontal)
+        
+        lyz_rightStackView.snp.makeConstraints { make in
+            make.right.equalToSuperview().offset(-10)
+            make.centerY.equalToSuperview()
+        }
+        
+        lyz_rightStackView.backgroundColor = .white
         
         lyz_lineView.snp.makeConstraints { make in
             make.bottom.left.right.equalToSuperview()

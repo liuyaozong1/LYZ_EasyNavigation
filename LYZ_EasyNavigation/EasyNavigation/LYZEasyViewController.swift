@@ -57,7 +57,57 @@ class LYZEasyViewController: UIViewController {
         }
     }
     //是否可以侧滑返回
-    
+    var lyz_canSideslipBack: Bool = true {
+        didSet {
+            navigationController?.interactivePopGestureRecognizer?.isEnabled = lyz_canSideslipBack
+        }
+    }
+    //按钮的大小
+    lazy var lyz_itemBtnFont: UIFont = UIFont.systemFont(ofSize: 14){
+        didSet {
+            self.lyz_navigationBar.lyz_rightStackView.arrangedSubviews.forEach { btn in
+                if btn.isKind(of: UIButton.self) {
+                    (btn as! UIButton).titleLabel?.font = lyz_itemBtnFont
+                }
+            }
+        }
+    }
+    //按钮的间距
+    var lyz_itemBtnPadding: CGFloat = 5 {
+        didSet {
+            self.lyz_navigationBar.lyz_rightStackView.spacing = lyz_itemBtnPadding
+        }
+    }
+    //右边第一个按钮
+    var rightFirstBtn: UIButton {
+        get {
+            if !isDesofStackView(btn: self.lyz_navigationBar.lyz_rightBtn) {
+                self.lyz_navigationBar.lyz_rightStackView.addArrangedSubview(self.lyz_navigationBar.lyz_rightBtn)
+            }
+            return  self.lyz_navigationBar.lyz_rightBtn
+        }
+    }
+    //右边第二个按钮
+    var rightSecondBtn: UIButton {
+        get {
+            if !isDesofStackView(btn: self.lyz_navigationBar.lyz_rightSecondBtn) {
+                self.lyz_navigationBar.lyz_rightStackView.addArrangedSubview(self.lyz_navigationBar.lyz_rightBtn)
+            }
+          return  self.lyz_navigationBar.lyz_rightSecondBtn
+        }
+        set {
+            print("----")
+        }
+    }
+    //右边第三个按钮
+    var rightThirdBtn: UIButton {
+        get {
+            if !isDesofStackView(btn: self.lyz_navigationBar.lyz_rightThirdBtn) {
+                self.lyz_navigationBar.lyz_rightStackView.addArrangedSubview(self.lyz_navigationBar.lyz_rightBtn)
+            }
+            return  self.lyz_navigationBar.lyz_rightThirdBtn
+        }
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -68,6 +118,7 @@ class LYZEasyViewController: UIViewController {
             }
         }
     }
+    
         
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
@@ -98,5 +149,19 @@ extension LYZEasyViewController {
             make.left.top.right.equalToSuperview()
             make.height.equalTo(kNavAndStatusHeight)
         }
+    }
+}
+
+extension LYZEasyViewController {
+    func isDesofStackView(btn: UIButton) -> Bool {
+        var flag = false
+        for view in self.lyz_navigationBar.lyz_rightStackView.arrangedSubviews {
+            if view.isKind(of: UIButton.self) {
+                if btn == view {
+                    flag = true
+                }
+            }
+        }
+        return flag
     }
 }
