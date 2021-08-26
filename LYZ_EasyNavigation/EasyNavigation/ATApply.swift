@@ -10,14 +10,14 @@ import Foundation
 import UIKit
 public protocol Apply {}
 
-extension Apply where Self: Any {
+public extension Apply where Self: Any {
     @discardableResult func apply(_ block: (Self) -> Void) -> Self {
         block(self)
         return self
     }
 }
 
-extension Apply where Self: AnyObject {
+public extension Apply where Self: AnyObject {
     @discardableResult func apply(_ block: (Self) -> Void) -> Self {
         block(self)
         return self

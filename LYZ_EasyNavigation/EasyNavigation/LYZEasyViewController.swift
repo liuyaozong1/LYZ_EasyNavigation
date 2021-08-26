@@ -7,39 +7,39 @@
 
 import UIKit
 import SnapKit
-class LYZEasyViewController: UIViewController {
+public class LYZEasyViewController: UIViewController {
     //导航 view
     lazy var lyz_navigationBar = LYZEasyNavigationBar().apply {
         $0.lyz_backBtn.addTarget(self, action: #selector(clickBack), for: .touchUpInside)
     }
     //标题
-    var lyz_navTitle = "" {
+    public var lyz_navTitle = "" {
         didSet {
             lyz_navigationBar.lyz_titleLabel.text = lyz_navTitle
         }
     }
     //小标题
-    var lyz_navSubtitle = ""
+    public var lyz_navSubtitle = ""
     //背景颜色
-    var lyz_navBackgroundColor: UIColor = .white {
+    public var lyz_navBackgroundColor: UIColor = .white {
         didSet {
             lyz_navigationBar.backgroundColor = lyz_navBackgroundColor
         }
     }
     //背景图片
-    var lyz_backgroundImage: UIImage = UIImage() {
+    public var lyz_backgroundImage: UIImage = UIImage() {
         didSet {
             lyz_navigationBar.lyz_backgroundImageView.image = lyz_backgroundImage
         }
     }
     //设置颜色
-    var lyz_tinColor: UIColor = .clear {
+    public var lyz_tinColor: UIColor = .clear {
         didSet {
             lyz_navigationBar.lyz_backBtn.tintColor = lyz_tinColor
         }
     }
     //设置状态栏
-    var lyz_statusBarType: UIStatusBarStyle = .default {
+    public var lyz_statusBarType: UIStatusBarStyle = .default {
         didSet {
             //更新状态栏
             //*注：当VC在nav中时，setNeedsStatusBarAppearanceUpdate的方法无效，VC中的preferredStatusBarStyle方法根本不用被调用。 原因是，[self setNeedsStatusBarAppearanceUpdate]发出后，只会调用navigation controller中的preferredStatusBarStyle方法，vc中的preferredStatusBarStyley方法跟本不会被调用。
@@ -47,7 +47,7 @@ class LYZEasyViewController: UIViewController {
         }
     }
     //大小标题
-    var lyz_bigSmallTitle: Bool = false {
+    public  var lyz_bigSmallTitle: Bool = false {
         didSet {
             if lyz_bigSmallTitle {
                 lyz_navigationBar.lyz_titleStackView.addArrangedSubview(lyz_navigationBar.lyz_navSubtitleLabel)
@@ -57,13 +57,13 @@ class LYZEasyViewController: UIViewController {
         }
     }
     //是否可以侧滑返回
-    var lyz_canSideslipBack: Bool = true {
+    public var lyz_canSideslipBack: Bool = true {
         didSet {
             navigationController?.interactivePopGestureRecognizer?.isEnabled = lyz_canSideslipBack
         }
     }
     //按钮的大小
-    lazy var lyz_itemBtnFont: UIFont = UIFont.systemFont(ofSize: 14){
+    public lazy var lyz_itemBtnFont: UIFont = UIFont.systemFont(ofSize: 14){
         didSet {
             self.lyz_navigationBar.lyz_rightStackView.arrangedSubviews.forEach { btn in
                 if btn.isKind(of: UIButton.self) {
@@ -73,13 +73,13 @@ class LYZEasyViewController: UIViewController {
         }
     }
     //按钮的间距
-    var lyz_itemBtnPadding: CGFloat = 5 {
+    public  var lyz_itemBtnPadding: CGFloat = 5 {
         didSet {
             self.lyz_navigationBar.lyz_rightStackView.spacing = lyz_itemBtnPadding
         }
     }
     //右边第一个按钮
-    var rightFirstBtn: UIButton {
+    public var rightFirstBtn: UIButton {
         get {
             if !isDesofStackView(btn: self.lyz_navigationBar.lyz_rightBtn) {
                 self.lyz_navigationBar.lyz_rightStackView.addArrangedSubview(self.lyz_navigationBar.lyz_rightBtn)
@@ -88,7 +88,7 @@ class LYZEasyViewController: UIViewController {
         }
     }
     //右边第二个按钮
-    var rightSecondBtn: UIButton {
+    public var rightSecondBtn: UIButton {
         get {
             if !isDesofStackView(btn: self.lyz_navigationBar.lyz_rightSecondBtn) {
                 self.lyz_navigationBar.lyz_rightStackView.addArrangedSubview(self.lyz_navigationBar.lyz_rightBtn)
@@ -100,7 +100,7 @@ class LYZEasyViewController: UIViewController {
         }
     }
     //右边第三个按钮
-    var rightThirdBtn: UIButton {
+    public var rightThirdBtn: UIButton {
         get {
             if !isDesofStackView(btn: self.lyz_navigationBar.lyz_rightThirdBtn) {
                 self.lyz_navigationBar.lyz_rightStackView.addArrangedSubview(self.lyz_navigationBar.lyz_rightBtn)
@@ -109,7 +109,7 @@ class LYZEasyViewController: UIViewController {
         }
     }
 
-    override func viewDidLoad() {
+    public override func viewDidLoad() {
         super.viewDidLoad()
         configSubviews()
         if let viewControllers = self.navigationController?.viewControllers {
@@ -121,20 +121,20 @@ class LYZEasyViewController: UIViewController {
     
         
     
-    override var preferredStatusBarStyle: UIStatusBarStyle {
+    public override var preferredStatusBarStyle: UIStatusBarStyle {
         return lyz_statusBarType
     }
     
 
 }
 
-extension LYZEasyViewController {
+public extension LYZEasyViewController {
     @objc func clickBack() {
         self.navigationController?.popViewController(animated: true)
     }
 }
 
-extension LYZEasyViewController {
+public extension LYZEasyViewController {
     func configSubviews() {
         setupSubviews()
         measureSubviews()
@@ -152,7 +152,7 @@ extension LYZEasyViewController {
     }
 }
 
-extension LYZEasyViewController {
+public extension LYZEasyViewController {
     func isDesofStackView(btn: UIButton) -> Bool {
         var flag = false
         for view in self.lyz_navigationBar.lyz_rightStackView.arrangedSubviews {

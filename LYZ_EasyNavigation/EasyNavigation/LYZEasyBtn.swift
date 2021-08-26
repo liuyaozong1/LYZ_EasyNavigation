@@ -8,9 +8,9 @@
 import UIKit
 
 fileprivate var BUTTON_BLOCK: UInt8 = 120
-extension UIButton {
+public extension UIButton {
     typealias BtnClickBlock = (UIButton) -> Void
-    var clickBlock: BtnClickBlock?  {
+    public var clickBlock: BtnClickBlock?  {
         get {
             if let block = objc_getAssociatedObject(self, &BUTTON_BLOCK) as? BtnClickBlock {
                 return block

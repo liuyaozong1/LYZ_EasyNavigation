@@ -7,7 +7,7 @@
 
 import UIKit
 
-extension UIView {
+public extension UIView {
     var lyz_x: CGFloat {
         get {
             return self.frame.origin.x
