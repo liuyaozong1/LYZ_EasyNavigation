@@ -7,7 +7,7 @@
 
 import UIKit
 import SnapKit
-public class LYZEasyViewController: UIViewController {
+open class LYZEasyViewController: UIViewController {
     //导航 view
     lazy var lyz_navigationBar = LYZEasyNavigationBar().apply {
         $0.lyz_backBtn.addTarget(self, action: #selector(clickBack), for: .touchUpInside)

@@ -7,7 +7,7 @@
 
 import UIKit
 
-public class LYZEasyNavigationController: UINavigationController {
+open class LYZEasyNavigationController: UINavigationController {
 
     open override func viewDidLoad() {
         super.viewDidLoad()
