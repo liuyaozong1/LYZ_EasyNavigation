@@ -109,7 +109,7 @@ public class LYZEasyViewController: UIViewController {
         }
     }
 
-    public override func viewDidLoad() {
+    open override func viewDidLoad() {
         super.viewDidLoad()
         configSubviews()
         if let viewControllers = self.navigationController?.viewControllers {
@@ -129,7 +129,7 @@ public class LYZEasyViewController: UIViewController {
 }
 
 public extension LYZEasyViewController {
-    @objc func clickBack() {
+     @objc open func clickBack() {
         self.navigationController?.popViewController(animated: true)
     }
 }

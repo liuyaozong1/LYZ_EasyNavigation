@@ -9,7 +9,7 @@ import UIKit
 
 public class LYZEasyNavigationController: UINavigationController {
 
-    public override func viewDidLoad() {
+    open override func viewDidLoad() {
         super.viewDidLoad()
         //隐藏掉系统 navigationBar
         self.navigationBar.isHidden = true
