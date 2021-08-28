@@ -104,8 +104,8 @@ Pod::Spec.new do |spec|
   #  non-essential files like tests, examples and documentation.
   #
 
-  spec.resource  = "LYZ_EasyNavigation/EasyNavigation/source/resource.bundle"
-  spec.resources = "LYZ_EasyNavigation/EasyNavigation/source/resource.bundle"
+  spec.resource  = "EasyNavigation/source/resource.bundle"
+  spec.resources = "EasyNavigation/source/resource.bundle"
 
   # spec.preserve_paths = "FilesToSave", "MoreFilesToSave"
 
