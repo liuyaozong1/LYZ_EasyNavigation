@@ -105,7 +105,7 @@ Pod::Spec.new do |spec|
   #
 
   #spec.resource  = "LYZ_EasyNavigation/EasyNavigation/source/resource.bundle"
-    #spec.resources = "LYZ_EasyNavigation/EasyNavigation/source/resource.bundle"
+    spec.resources = "LYZ_EasyNavigation/EasyNavigation/source/*.{bundle}"
 
   # spec.preserve_paths = "FilesToSave", "MoreFilesToSave"
 

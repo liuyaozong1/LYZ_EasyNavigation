@@ -14,11 +14,7 @@ class LYZTest1ViewController: LYZEasyViewController {
         self.view.backgroundColor = .white
         // Do any additional setup after loading the view.
         self.lyz_navTitle = "我的第一个页面哦"
-        self.rightFirstBtn.setTitle("设置", for: .normal)
-        self.rightSecondBtn.setTitle("帮助", for: .normal)
-        self.rightFirstBtn.tap { btn in
-            print("点击了设置")
-        }
+       
 
     }
     

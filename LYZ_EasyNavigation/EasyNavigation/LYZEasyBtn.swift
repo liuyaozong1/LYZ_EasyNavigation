@@ -10,7 +10,7 @@ import UIKit
 fileprivate var BUTTON_BLOCK: UInt8 = 120
 public extension UIButton {
     typealias BtnClickBlock = (UIButton) -> Void
-    public var clickBlock: BtnClickBlock?  {
+    var clickBlock: BtnClickBlock?  {
         get {
             if let block = objc_getAssociatedObject(self, &BUTTON_BLOCK) as? BtnClickBlock {
                 return block
@@ -24,7 +24,7 @@ public extension UIButton {
         }
     }
     
-    func tap(block _block: BtnClickBlock?) {
+    func click(block _block: BtnClickBlock?) {
         self.clickBlock = _block
     }
     

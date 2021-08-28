@@ -83,7 +83,7 @@ open class LYZEasyViewController: UIViewController {
     public var rightFirstBtn: UIButton {
         get {
             if !isDesofStackView(btn: self.lyz_navigationBar.lyz_rightBtn) {
-                self.lyz_navigationBar.lyz_rightStackView.addArrangedSubview(self.lyz_navigationBar.lyz_rightBtn)
+                self.lyz_navigationBar.lyz_rightStackView.insertArrangedSubview(self.lyz_navigationBar.lyz_rightBtn, at: 0)
             }
             return  self.lyz_navigationBar.lyz_rightBtn
         }
@@ -92,7 +92,12 @@ open class LYZEasyViewController: UIViewController {
     public var rightSecondBtn: UIButton {
         get {
             if !isDesofStackView(btn: self.lyz_navigationBar.lyz_rightSecondBtn) {
-                self.lyz_navigationBar.lyz_rightStackView.addArrangedSubview(self.lyz_navigationBar.lyz_rightSecondBtn)
+                if self.lyz_navigationBar.lyz_rightStackView.arrangedSubviews.count == 2 {
+                    self.lyz_navigationBar.lyz_rightStackView.insertArrangedSubview(self.lyz_navigationBar.lyz_rightSecondBtn, at: 1)
+                } else {
+                    self.lyz_navigationBar.lyz_rightStackView.addArrangedSubview(self.lyz_navigationBar.lyz_rightSecondBtn)
+                }
+                
             }
           return  self.lyz_navigationBar.lyz_rightSecondBtn
         }
@@ -117,6 +122,9 @@ open class LYZEasyViewController: UIViewController {
             if viewControllers.count > 1 {
                 lyz_navigationBar.lyz_backBtn.isHidden = false
             }
+        }
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 0.2) {
+            self.view.bringSubviewToFront(self.lyz_navigationBar)
         }
     }
     

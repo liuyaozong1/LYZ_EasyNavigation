@@ -20,7 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         LYZEasyNavigationConfig.navBackgroundColor = .green
         LYZEasyNavigationConfig.barButtonItemColor = .systemPink
         LYZEasyNavigationConfig.barButtonItemBackgroundColor = .black
-        LYZEasyNavigationConfig.barButtonItemPadding = 15
+        LYZEasyNavigationConfig.barButtonItemPadding = 5
         LYZEasyNavigationConfig.bottomLineColor = .blue
         
         let rootVC = LYZEasyNavigationController(rootViewController: LYZTest1ViewController())
