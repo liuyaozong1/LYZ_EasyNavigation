@@ -24,7 +24,4 @@ open class LYZEasyNavigationConfig: NSObject {
     static public var subTitleFont: UIFont = .systemFont(ofSize: 12) //二级标题font
     static public var bottomLineColor: UIColor = RGBColor(234, 234, 234)//导航栏底部线的颜色
     static public var bottomLineHeight: CGFloat = 1//导航栏底部线的颜色
-    
-    
-    
 }
