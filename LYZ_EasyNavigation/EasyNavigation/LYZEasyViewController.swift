@@ -119,20 +119,16 @@ open class LYZEasyViewController: UIViewController {
         }
     }
     
-        
-    
     public override var preferredStatusBarStyle: UIStatusBarStyle {
         return lyz_statusBarType
     }
     
+    @objc open func clickBack() {
+       self.navigationController?.popViewController(animated: true)
+   }
 
 }
 
-public extension LYZEasyViewController {
-     @objc open func clickBack() {
-        self.navigationController?.popViewController(animated: true)
-    }
-}
 
 public extension LYZEasyViewController {
     func configSubviews() {
