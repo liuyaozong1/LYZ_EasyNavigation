@@ -8,7 +8,7 @@
 import UIKit
 
 public extension UIView {
-    var lyz_x: CGFloat {
+    public var lyz_x: CGFloat {
         get {
             return self.frame.origin.x
         }
@@ -19,7 +19,7 @@ public extension UIView {
         }
     }
     
-    var lyz_y: CGFloat {
+    public var lyz_y: CGFloat {
         get {
             return self.frame.origin.y
         }
@@ -30,7 +30,7 @@ public extension UIView {
         }
     }
     
-    var lyz_w: CGFloat {
+    public var lyz_w: CGFloat {
         get {
             return self.frame.size.width
         }
@@ -41,7 +41,7 @@ public extension UIView {
         }
     }
     
-    var lyz_h: CGFloat {
+    public var lyz_h: CGFloat {
         get {
             return self.frame.size.height
         }
@@ -52,7 +52,7 @@ public extension UIView {
         }
     }
     
-    var lyz_size: CGSize {
+    public var lyz_size: CGSize {
         get {
             return self.frame.size
         }
@@ -63,7 +63,7 @@ public extension UIView {
         }
     }
     
-    var lyz_orgin: CGPoint {
+    public var lyz_orgin: CGPoint {
         get {
             return self.frame.origin
         }

@@ -69,6 +69,7 @@ open class LYZEasyViewController: UIViewController {
                 if btn.isKind(of: UIButton.self) {
                     (btn as! UIButton).titleLabel?.font = lyz_itemBtnFont
                 }
+          
             }
         }
     }
@@ -91,7 +92,7 @@ open class LYZEasyViewController: UIViewController {
     public var rightSecondBtn: UIButton {
         get {
             if !isDesofStackView(btn: self.lyz_navigationBar.lyz_rightSecondBtn) {
-                self.lyz_navigationBar.lyz_rightStackView.addArrangedSubview(self.lyz_navigationBar.lyz_rightBtn)
+                self.lyz_navigationBar.lyz_rightStackView.addArrangedSubview(self.lyz_navigationBar.lyz_rightSecondBtn)
             }
           return  self.lyz_navigationBar.lyz_rightSecondBtn
         }
@@ -103,7 +104,7 @@ open class LYZEasyViewController: UIViewController {
     public var rightThirdBtn: UIButton {
         get {
             if !isDesofStackView(btn: self.lyz_navigationBar.lyz_rightThirdBtn) {
-                self.lyz_navigationBar.lyz_rightStackView.addArrangedSubview(self.lyz_navigationBar.lyz_rightBtn)
+                self.lyz_navigationBar.lyz_rightStackView.addArrangedSubview(self.lyz_navigationBar.lyz_rightThirdBtn)
             }
             return  self.lyz_navigationBar.lyz_rightThirdBtn
         }

@@ -16,7 +16,7 @@ Pod::Spec.new do |spec|
   #
 
   spec.name         = "LYZ_EasyNavigation"
-  spec.version      = "0.0.9"
+  spec.version      = "0.1.0"
   spec.summary      = "一个简单易用功能丰富的导航看控制器"
   spec.swift_version = '5.0'
 
@@ -104,7 +104,7 @@ Pod::Spec.new do |spec|
   #  non-essential files like tests, examples and documentation.
   #
 
-  # spec.resource  = "icon.png"
+  spec.resource  = "LYZ_EasyNavigation/EasyNavigation/source/resource.bundle"
   # spec.resources = "Resources/*.png"
 
   # spec.preserve_paths = "FilesToSave", "MoreFilesToSave"

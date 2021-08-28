@@ -7,84 +7,80 @@
 
 import UIKit
 import SnapKit
-class LYZEasyNavigationBar: UIView {
+open class LYZEasyNavigationBar: UIView {
     //状态栏 view
-    lazy var lyz_statusBarView = UIView().apply {
+    public lazy var lyz_statusBarView = UIView().apply {
         $0.backgroundColor = .clear
     }
     //导航栏 View
-    lazy var lyz_navigationView = UIView().apply {
+    public lazy var lyz_navigationView = UIView().apply {
         $0.backgroundColor = .clear
     }
     //返回按钮
-    lazy var lyz_backBtn = UIButton().apply {
-        $0.setImage(UIImage(named: "back_icon"), for: .normal)
+    public lazy var lyz_backBtn = UIButton().apply {
+        $0.setImage(LYZEasyNavigationConfig.navBackButtonImage, for: .normal)
         $0.isHidden = true
     }
     //底部的线
-    lazy var lyz_lineView = UIView().apply {
-        $0.backgroundColor = RGBColor(234, 234, 234)
+    public lazy var lyz_lineView = UIView().apply {
+        $0.backgroundColor = LYZEasyNavigationConfig.bottomLineColor
     }
     //背景图片
-    lazy var lyz_backgroundImageView = UIImageView().apply {
+    public lazy var lyz_backgroundImageView = UIImageView().apply {
         $0.contentMode = .scaleToFill
     }
     //标题容器
-    lazy var lyz_titleStackView = UIStackView().apply {
+    public lazy var lyz_titleStackView = UIStackView().apply {
         $0.alignment = .center
         $0.axis = .vertical
         $0.distribution = .fillEqually
         $0.spacing = 0
     }
     //大标题
-    lazy var lyz_titleLabel = UILabel().apply {
+    public lazy var lyz_titleLabel = UILabel().apply {
         $0.text = "一级标题"
-        $0.font = .systemFont(ofSize: 16)
-        $0.textColor = .black
+        $0.font = LYZEasyNavigationConfig.titleFont
+        $0.textColor = LYZEasyNavigationConfig.titleColor
     }
     //小标题
-    lazy var lyz_navSubtitleLabel = UILabel().apply {
+    public lazy var lyz_navSubtitleLabel = UILabel().apply {
         $0.text = "二级标题"
-        $0.font = .systemFont(ofSize:  12)
-        $0.textColor = .black
+        $0.font = LYZEasyNavigationConfig.subTitleFont
+        $0.textColor = LYZEasyNavigationConfig.subTitleColor
     }
     //右边的 stackView
-    lazy  var lyz_rightStackView = UIStackView().apply {
+    public lazy  var lyz_rightStackView = UIStackView().apply {
         $0.alignment = .center
         $0.axis = .horizontal
         $0.distribution = .equalSpacing
-        $0.spacing = 5
+        $0.spacing = LYZEasyNavigationConfig.barButtonItemPadding
         $0.backgroundColor = .clear
     }
     //右边的第一个按钮
-    lazy var lyz_rightBtn: UIButton = {
-        let btn = UIButton()
-        btn.titleLabel?.font = UIFont.systemFont(ofSize: 14)
-        btn.setTitleColor(.black, for: .normal)
+    public lazy var lyz_rightBtn: BarButton = {
+        let btn = BarButton()
         return btn
     }()
     //右边的第二个按钮
-    lazy var lyz_rightSecondBtn: UIButton =  {
-        let btn = UIButton()
-        btn.titleLabel?.font = UIFont.systemFont(ofSize: 14)
-        btn.setTitleColor(.black, for: .normal)
+    public lazy var lyz_rightSecondBtn: BarButton =  {
+        let btn = BarButton()
         return btn
     }()
     //右边的第三个按钮
-    lazy var lyz_rightThirdBtn: UIButton =  {
-        let btn = UIButton()
-        btn.titleLabel?.font = UIFont.systemFont(ofSize: 14)
-        btn.setTitleColor(.black, for: .normal)
+    public lazy var lyz_rightThirdBtn: BarButton =  {
+        let btn = BarButton()
         return btn
     }()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        backgroundColor = .white
+        backgroundColor = LYZEasyNavigationConfig.navBackgroundColor
+        lyz_backgroundImageView.image = LYZEasyNavigationConfig.navBackgroundImage
+        lyz_backgroundImageView.contentMode = LYZEasyNavigationConfig.navBackgroundImageMode
         configSubviews()
     }
     
-    required init?(coder: NSCoder) {
+    required public init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
@@ -95,7 +91,19 @@ class LYZEasyNavigationBar: UIView {
 }
 
 extension LYZEasyNavigationBar {
-    
+   public class  BarButton: UIButton {
+        override init(frame: CGRect) {
+            super.init(frame: frame)
+            self.backgroundColor = .clear
+            self.titleLabel?.font =  LYZEasyNavigationConfig.barButtonItemFont
+            self.setTitleColor(LYZEasyNavigationConfig.barButtonItemColor, for: .normal)
+            self.backgroundColor = LYZEasyNavigationConfig.barButtonItemBackgroundColor
+        }
+        
+        required public init?(coder: NSCoder) {
+            fatalError("init(coder:) has not been implemented")
+        }
+    }
 }
 
 extension LYZEasyNavigationBar {
@@ -152,11 +160,9 @@ extension LYZEasyNavigationBar {
             make.centerY.equalToSuperview()
         }
         
-        lyz_rightStackView.backgroundColor = .white
-        
         lyz_lineView.snp.makeConstraints { make in
             make.bottom.left.right.equalToSuperview()
-            make.height.equalTo(1)
+            make.height.equalTo(LYZEasyNavigationConfig.bottomLineHeight)
         }
     }
 }
