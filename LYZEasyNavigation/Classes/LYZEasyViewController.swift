@@ -124,7 +124,7 @@ open class LYZEasyViewController: UIViewController {
             }
         }
         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 0.2) {
-            self.view.bringSubview(toFront: self.lyz_navigationBar)
+            self.view.bringSubviewToFront(self.lyz_navigationBar)
         }
     }
     

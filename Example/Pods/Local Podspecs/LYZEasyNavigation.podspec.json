@@ -18,8 +18,7 @@
   "platforms": {
     "ios": "11.0"
   },
-  "resources": "LYZEasyNavigation/LYZEasyNavigation/Classes/source/*.{bundle}",
-  "source_files": "LYZEasyNavigation/LYZEasyNavigation/Classes/**/*",
+  "source_files": "LYZEasyNavigation/Classes/**/*",
   "dependencies": {
     "SnapKit": [
 
