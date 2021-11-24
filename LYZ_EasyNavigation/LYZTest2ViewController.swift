@@ -19,6 +19,7 @@ class LYZTest2ViewController: LYZEasyViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = .white
+        self.lyz_canSideslipBack = true
         self.lyz_navTitle = "第二个"
         self.rightSecondBtn.setTitle("帮助", for: .normal)
         self.rightThirdBtn.setTitle("客服", for: .normal)

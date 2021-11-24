@@ -22,6 +22,7 @@
 		B193592326D62A92006D1137 /* LYZEasyBtn.swift in Sources */ = {isa = PBXBuildFile; fileRef = B193592226D62A92006D1137 /* LYZEasyBtn.swift */; };
 		B1B81DBD26DA0B100041D06A /* LYZEasyNavigationConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B81DBC26DA0B100041D06A /* LYZEasyNavigationConfig.swift */; };
 		B1B81DC026DA0F290041D06A /* resource.bundle in Resources */ = {isa = PBXBuildFile; fileRef = B1B81DBF26DA0F290041D06A /* resource.bundle */; };
+		B1E9B67F274CE7490097DA1B /* LYZ_EasyNavigation.podspec in Resources */ = {isa = PBXBuildFile; fileRef = B1E9B67E274CE7490097DA1B /* LYZ_EasyNavigation.podspec */; };
 		DD88C6FD4117FA00E688C83C /* Pods_LYZ_EsayNavigation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B9618FF694EA88D3084E44A /* Pods_LYZ_EsayNavigation.framework */; };
 /* End PBXBuildFile section */
 
@@ -44,8 +45,10 @@
 		B17BF05126CC9FF700BFE4DC /* LYZTest1ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LYZTest1ViewController.swift; sourceTree = "<group>"; };
 		B17BF05326CCA00200BFE4DC /* LYZTest2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LYZTest2ViewController.swift; sourceTree = "<group>"; };
 		B193592226D62A92006D1137 /* LYZEasyBtn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LYZEasyBtn.swift; sourceTree = "<group>"; };
+		B1A37B9F274CC4D100916518 /* LYZ_EsayNavigation-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LYZ_EsayNavigation-Bridging-Header.h"; sourceTree = "<group>"; };
 		B1B81DBC26DA0B100041D06A /* LYZEasyNavigationConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LYZEasyNavigationConfig.swift; sourceTree = "<group>"; };
 		B1B81DBF26DA0F290041D06A /* resource.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = resource.bundle; sourceTree = "<group>"; };
+		B1E9B67E274CE7490097DA1B /* LYZ_EasyNavigation.podspec */ = {isa = PBXFileReference; lastKnownFileType = file; path = LYZ_EasyNavigation.podspec; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +84,7 @@
 		B17BF02D26CC9A6400BFE4DC /* LYZ_EasyNavigation */ = {
 			isa = PBXGroup;
 			children = (
+				B1E9B67E274CE7490097DA1B /* LYZ_EasyNavigation.podspec */,
 				B17BF05626CCA01700BFE4DC /* EasyNavigation */,
 				B17BF02E26CC9A6400BFE4DC /* AppDelegate.swift */,
 				B17BF03726CC9A6500BFE4DC /* Assets.xcassets */,
@@ -88,6 +92,7 @@
 				B17BF03C26CC9A6500BFE4DC /* Info.plist */,
 				B17BF05126CC9FF700BFE4DC /* LYZTest1ViewController.swift */,
 				B17BF05326CCA00200BFE4DC /* LYZTest2ViewController.swift */,
+				B1A37B9F274CC4D100916518 /* LYZ_EsayNavigation-Bridging-Header.h */,
 			);
 			path = LYZ_EasyNavigation;
 			sourceTree = "<group>";
@@ -168,6 +173,7 @@
 				TargetAttributes = {
 					B17BF02A26CC9A6400BFE4DC = {
 						CreatedOnToolsVersion = 12.5.1;
+						LastSwiftMigration = 1320;
 					};
 				};
 			};
@@ -196,6 +202,7 @@
 			files = (
 				B17BF03B26CC9A6500BFE4DC /* LaunchScreen.storyboard in Resources */,
 				B17BF03826CC9A6500BFE4DC /* Assets.xcassets in Resources */,
+				B1E9B67F274CE7490097DA1B /* LYZ_EasyNavigation.podspec in Resources */,
 				B1B81DC026DA0F290041D06A /* resource.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -400,6 +407,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = LL25C34593;
@@ -412,6 +420,8 @@
 				MARKETING_VERSION = 0.1.2;
 				PRODUCT_BUNDLE_IDENTIFIER = "-23213.LYZ-EsayNavigation";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "LYZ_EasyNavigation/LYZ_EsayNavigation-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -423,6 +433,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = LL25C34593;
@@ -435,6 +446,7 @@
 				MARKETING_VERSION = 0.1.2;
 				PRODUCT_BUNDLE_IDENTIFIER = "-23213.LYZ-EsayNavigation";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "LYZ_EasyNavigation/LYZ_EsayNavigation-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
