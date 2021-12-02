@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'LYZEasyNavigation'
-  s.version          = '0.1.3'
+  s.version          = '0.1.4'
   s.summary          = '一个简单易用功能丰富的导航看控制器'
   s.swift_version = '5.0'
 # This description is used to generate tags and improve search results.
@@ -32,7 +32,7 @@ Pod::Spec.new do |s|
   #   'LYZEasyNavigation' => ['LYZEasyNavigation/Assets/*.png']
   # }
 #  /Users/liuyaozong/Desktop/LYZ_Library/LYZEasyNavigation/LYZEasyNavigation/Classes/LYZEasyBtn.swift
-
+#/Users/liuyaozong/Library/Caches/CocoaPods/Pods/External/.podspec
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
     s.dependency "SnapKit"
